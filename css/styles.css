@@ -183,6 +183,12 @@ nav h1 a {
   min-height: 248px;
   min-width: 100%; */
 }
+
+#restaurants-list {
+  max-width: 360px;
+  margin: 0 auto;
+}
+
 #restaurants-list li h1 {
   color: #f18200;
   font-family: Arial,sans-serif;
@@ -310,6 +316,120 @@ nav h1 a {
   color: #666;
 }
 
+/* ====================== Tablet-ready ====================== */
+@media screen and (min-width: 460px) and (max-width: 1199px) {
+  /* ====================== Navigation ====================== */
+  nav h1 a {
+    font-size: 14pt;
+    letter-spacing: 15px;
+  }
+
+  /* ====================== Map ====================== */
+  #map {
+    height: 400px;
+  }
+
+  /* ====================== Restaurant Filtering ====================== */
+
+  .filter-options {
+    display: grid;
+    grid-template-columns: max-content repeat(2, 2fr);
+    grid-column-gap: 30px;
+    justify-items: center;
+    padding: 10px 10%;
+  }
+
+  .filter-options h2 {
+    padding: 0 40px 0 0;
+    font-size: 12pt;
+    text-align: center;
+  }
+
+  /* ====================== Restaurant Listing ====================== */
+  #restaurants-list {
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+
+  #restaurants-list li {
+    max-width: 330px;
+  }
+
+  #restaurants-list li h1 {
+    font-size: 12pt;
+  }
+
+  /* ====================== Footer ====================== */
+  #footer {
+    font-size: 8pt;
+  }
+
+  /* ====================== Restaurant Details ====================== */
+  .inside td,
+  .inside th,
+  .inside p{
+    font-size: 11pt;
+  }
+
+  .inside header,
+  .inside nav,
+  .inside #footer {
+    /* width: 1200px; */
+  }
+
+  #breadcrumb li {
+    font-size: 13pt;
+  }
+
+  .inside #maincontent {
+    width: 100%;
+    margin: 125px 0 0;
+    /* margin-top: 125px; */
+    width: 100%;
+    display: grid;
+    grid-template-columns: minmax(450px, 1fr) 2fr;
+    grid-template-rows: auto auto;
+    grid-gap: 30px;
+    grid-template-areas:
+                        "map  review"
+                        "info review";
+  }
+
+  .inside #map-container {
+    margin: 0;
+    grid-area: map;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .inside #restaurant-container {
+    grid-area: info;
+    width: 100%;
+    margin-bottom: 30px;
+    border: none;
+  }
+
+  .inside #reviews-container {
+    grid-area: review;
+    width: 100%;
+    padding: 10px 50px 30px 20px;
+    /* padding: 0; */
+    border: none;
+  }
+
+  .inside #reviews-container h2 {
+    font-size: 18pt;
+  }
+
+  .inside #reviews-list li {
+    padding: 10px 30px 20px;
+  }
+}
+
 /* ====================== Desktop-ready ====================== */
 @media screen and (min-width: 1200px) {
   body {
@@ -349,6 +469,7 @@ nav h1 a {
 
   /* ====================== Restaurant Listing ====================== */
   #restaurants-list {
+    max-width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 30px;
