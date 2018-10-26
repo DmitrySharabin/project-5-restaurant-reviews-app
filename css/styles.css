@@ -80,8 +80,9 @@ nav h1 a {
   text-transform: uppercase;
 }
 #breadcrumb {
+    padding: 15px 30px;
     /* padding: 10px 40px 16px; */
-    padding: 10px;
+    /* padding: 10px; */
     list-style: none;
     background-color: #eee;
     font-size: 17px;
@@ -279,10 +280,11 @@ nav h1 a {
 #restaurant-container, #reviews-container {
   border-bottom: 1px solid #d9d9d9;
   border-top: 1px solid #fff;
-  /* padding: 140px 40px 30px; */
   padding: 10px 20px;
-  /* width: 50%; */
   width: 100vw;
+  max-width: 400px;
+  min-width: 320px;
+  margin: 0 auto;
 }
 #reviews-container {
   padding-bottom: 80px;
@@ -318,9 +320,10 @@ nav h1 a {
 
 /* ====================== Tablet-ready ====================== */
 @media screen and (min-width: 460px) and (max-width: 1199px) {
+
   /* ====================== Navigation ====================== */
   nav h1 a {
-    font-size: 14pt;
+    font-size: 16pt;
     letter-spacing: 15px;
   }
 
@@ -341,7 +344,7 @@ nav h1 a {
 
   .filter-options h2 {
     padding: 0 40px 0 0;
-    font-size: 12pt;
+    font-size: 13pt;
     text-align: center;
   }
 
@@ -365,19 +368,21 @@ nav h1 a {
   /* ====================== Footer ====================== */
   #footer {
     font-size: 8pt;
+    /* position:fixed;
+    left:0px;
+    bottom:0px; */
   }
-
+}
+@media screen and (min-width: 650px) and (max-width: 1199px) {
   /* ====================== Restaurant Details ====================== */
   .inside td,
   .inside th,
-  .inside p{
+  .inside p {
     font-size: 11pt;
   }
 
-  .inside header,
-  .inside nav,
-  .inside #footer {
-    /* width: 1200px; */
+  #breadcrumb {
+    padding: 15px 30px;
   }
 
   #breadcrumb li {
@@ -387,28 +392,31 @@ nav h1 a {
   .inside #maincontent {
     width: 100%;
     margin: 125px 0 0;
-    /* margin-top: 125px; */
-    width: 100%;
     display: grid;
-    grid-template-columns: minmax(450px, 1fr) 2fr;
-    grid-template-rows: auto auto;
-    grid-gap: 30px;
+    grid-template-columns: 1fr 1.5fr;
+    grid-template-rows: 350px auto;
+    grid-gap: 15px;
     grid-template-areas:
                         "map  review"
                         "info review";
+  }
+
+  .inside #map {
+    height: 350px;
   }
 
   .inside #map-container {
     margin: 0;
     grid-area: map;
     width: 100%;
-    margin: 0;
+    height: auto;
     padding: 0;
   }
 
   .inside #restaurant-container {
     grid-area: info;
     width: 100%;
+    max-width: 100%;
     margin-bottom: 30px;
     border: none;
   }
@@ -416,13 +424,13 @@ nav h1 a {
   .inside #reviews-container {
     grid-area: review;
     width: 100%;
-    padding: 10px 50px 30px 20px;
-    /* padding: 0; */
+    max-width: 100%;
+    padding: 10px 30px 20px;
     border: none;
   }
 
   .inside #reviews-container h2 {
-    font-size: 18pt;
+    font-size: 16pt;
   }
 
   .inside #reviews-list li {
@@ -439,7 +447,7 @@ nav h1 a {
 
   /* ====================== Navigation ====================== */
   nav h1 a {
-    font-size: 20pt;
+    font-size: 16pt;
     letter-spacing: 15px;
   }
 
@@ -494,6 +502,10 @@ nav h1 a {
     width: 1200px;
   }
 
+  #breadcrumb {
+    padding: 15px 30px;
+  }
+
   #breadcrumb li {
     font-size: 13pt;
   }
@@ -502,10 +514,9 @@ nav h1 a {
     width: 100%;
     margin: 125px 0 0;
     /* margin-top: 125px; */
-    width: 100%;
     display: grid;
     grid-template-columns: minmax(450px, 1fr) 2fr;
-    grid-template-rows: auto auto;
+    grid-template-rows: 350px auto;
     grid-gap: 30px;
     grid-template-areas:
                         "map  review"
@@ -520,9 +531,14 @@ nav h1 a {
     padding: 0;
   }
 
+  .inside #map {
+    height: 350px;
+  }
+
   .inside #restaurant-container {
     grid-area: info;
     width: 100%;
+    max-width: 100%;
     margin-bottom: 30px;
     border: none;
   }
@@ -530,13 +546,14 @@ nav h1 a {
   .inside #reviews-container {
     grid-area: review;
     width: 100%;
+    max-width: 100%;
     padding: 10px 50px 30px 20px;
     /* padding: 0; */
     border: none;
   }
 
   .inside #reviews-container h2 {
-    font-size: 18pt;
+    font-size: 16pt;
   }
 
   .inside #reviews-list li {
