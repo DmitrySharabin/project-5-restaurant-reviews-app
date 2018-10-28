@@ -5,6 +5,11 @@ html {
   box-sizing: border-box;
 }
 
+/* Style for polyfill for :focus-visible  */
+*:focus:not(.focus-visible) {
+  outline: none;
+}
+
 *,
 *::before,
 *::after {
