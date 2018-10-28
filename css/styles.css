@@ -36,6 +36,23 @@ ul, li {
 	color: #333;
 }
 
+/* Style skip link */
+.skip-link {
+  position: absolute;
+  left: 0;
+  top: -40px;
+  background: #bf1722;
+  color: white;
+  padding: 8px;
+  z-index: 10000;
+}
+
+.skip-link:focus {
+  top: 0;
+  background: #bf1722;
+  color: white;
+}
+
 a {
 	color: orange;
 	text-decoration: none;
