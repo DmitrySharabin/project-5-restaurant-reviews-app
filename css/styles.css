@@ -36,7 +36,7 @@ ul, li {
 	color: #333;
 }
 
-/* Style skip link */
+/* Style skip links */
 .skip-link {
   position: absolute;
   left: 0;
@@ -51,6 +51,14 @@ ul, li {
   top: 0;
   background: #bf1722;
   color: white;
+}
+
+.inside .skip-link {
+  top: -160px;
+}
+
+.inside .skip-link:focus {
+  top: -125px;
 }
 
 a {
